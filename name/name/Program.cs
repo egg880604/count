@@ -17,27 +17,14 @@ namespace name
             string[] zodiac = { "金牛", "", "巨蟹", "白羊", "雙魚", "雙子", "天蠍", "巨蟹", "獅子", "雙魚", "雙子", "雙子", "獅子", "雙魚", "天蠍", "天蠍", "處女", "處女", "金牛", "雙魚", "處女", "摩羯", "雙魚", "白羊", "天蠍", "處女", "雙子", "金牛", "雙子", "白羊", "白羊", "摩羯", "射手", "巨蟹", "雙魚", "獅子", "射手", "摩羯", "天蠍", "", "雙魚", "雙子", "", "雙魚", "處女", "金牛", "天秤", "水瓶", "巨蟹", "處女", "白羊", "摩羯", "水瓶", "天秤", "金牛", "天蠍", "天蠍", "處女", "雙子", "", "摩羯", "天蠍", "雙子", "", "獅子", "天蠍", "射手", "金牛" };
             string[] blood = { "O", "其他", "O", "O", "A", "O", "A", "A", "O", "O", "A", "O", "A", "B", "O", "O", "A", "其他", "O", "O", "A", "", "B", "O", "", "O", "B", "O", "B", "B", "B", "O", "O", "AB", "O", "B", "A", "O", "O", "", "O", "A", "", "O", "O", "A", "O", "O", "其他", "B", "O", "O", "O", "A", "AB", "A", "O", "B", "AB", "", "O", "O", "O", "", "O", "A", "A", "O" };
 
+            
+           
             //各血型的變數
             double countA = 0;
             double countB = 0;
             double countO = 0;
             double countAB = 0;
-
-            //女生總合的變數
-            int sumG = 0;
-            //女生人數的變數
-            int countG = 0;
-            //男生總合的變數
-            int sumB = 0;
-            //男生人數的變數
-            int countb = 0;
-            //總人數總合的變數
-            int sum = 0;
-            //總人數的變數
-            int countpp = 0;
-
-
-
+            
             //血型迴圈
             for (int i = 0; i < blood.Length; i++)
             {
@@ -72,24 +59,27 @@ namespace name
             double precentO = (double)countO / (double)blood.Length * 100;
             double precentAB = (double)countAB / (double)blood.Length * 100;
 
-            
 
-            
-
-            
-
-
+            //女生總合的變數
+            int sumG = 0;
+            //女生人數的變數
+            int countG = 0;
+            //男生總合的變數
+            int sumB = 0;
+            //男生人數的變數
+            int countb = 0;
+            //總人數總合的變數
+            int sum = 0;
             //最大值和最小值的變數
             int max = -9999999;
             int min = 99999999;
-
+            
             //身高迴圈
             for (int t = 0; t < heights.Length; t++)
             {
                 //過濾無效資料
                 if (heights[t] > 100 && heights[t] < 200)
                 {
-
                     //如果是女生
                     if (grender[t] == "女")
                     {
@@ -123,13 +113,11 @@ namespace name
 
             }
             
-            
-
-
             // 男女生百分比
             double precentb = (double)countb / (double)grender.Length * 100;
             double precentG = (double)countG / (double)grender.Length * 100;
 
+            
             Console.ForegroundColor = ConsoleColor.Red;
 
             Console.WriteLine("╔═══════════════════════════════════════════════════════════════════════╗");
