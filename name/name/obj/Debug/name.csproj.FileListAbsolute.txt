@@ -4,3 +4,9 @@ C:\git\name\name\bin\Debug\name.pdb
 C:\git\name\name\obj\Debug\name.csprojResolveAssemblyReference.cache
 C:\git\name\name\obj\Debug\name.exe
 C:\git\name\name\obj\Debug\name.pdb
+D:\git\count\name\name\bin\Debug\name.exe.config
+D:\git\count\name\name\obj\Debug\name.exe
+D:\git\count\name\name\obj\Debug\name.pdb
+D:\git\count\name\name\bin\Debug\name.exe
+D:\git\count\name\name\bin\Debug\name.pdb
+D:\git\count\name\name\obj\Debug\name.csprojResolveAssemblyReference.cache
