@@ -16,9 +16,7 @@ namespace name
             int[] heights = { 173, 0, 179, 155, 183, 170, 163, 174, 165, 189, 177, 180, 154, 167, 170, 173, 165, 158, 180, 165, 153, 175, 162, 165, 0, 160, 165, 173, 164, 177, 177, 180, 170, 151, 176, 180, 168, 152, 666, 2147483647, 165, 155, 777, 173, 169, 170, 169, 171, 0, 170, 150, 160, 155, 164, 163, 165, 184, 165, 155, 0, 168, 160, 169, 0, 150, 163, 168, 173 };
             string[] zodiac = { "金牛", "", "巨蟹", "白羊", "雙魚", "雙子", "天蠍", "巨蟹", "獅子", "雙魚", "雙子", "雙子", "獅子", "雙魚", "天蠍", "天蠍", "處女", "處女", "金牛", "雙魚", "處女", "摩羯", "雙魚", "白羊", "天蠍", "處女", "雙子", "金牛", "雙子", "白羊", "白羊", "摩羯", "射手", "巨蟹", "雙魚", "獅子", "射手", "摩羯", "天蠍", "", "雙魚", "雙子", "", "雙魚", "處女", "金牛", "天秤", "水瓶", "巨蟹", "處女", "白羊", "摩羯", "水瓶", "天秤", "金牛", "天蠍", "天蠍", "處女", "雙子", "", "摩羯", "天蠍", "雙子", "", "獅子", "天蠍", "射手", "金牛" };
             string[] blood = { "O", "其他", "O", "O", "A", "O", "A", "A", "O", "O", "A", "O", "A", "B", "O", "O", "A", "其他", "O", "O", "A", "", "B", "O", "", "O", "B", "O", "B", "B", "B", "O", "O", "AB", "O", "B", "A", "O", "O", "", "O", "A", "", "O", "O", "A", "O", "O", "其他", "B", "O", "O", "O", "A", "AB", "A", "O", "B", "AB", "", "O", "O", "O", "", "O", "A", "A", "O" };
-
             
-           
             //各血型的變數
             double countA = 0;
             double countB = 0;
@@ -28,6 +26,7 @@ namespace name
             //血型迴圈
             for (int i = 0; i < blood.Length; i++)
             {
+
                 //如果是A型
                 if (blood[i] == "A")
                 {
@@ -58,18 +57,22 @@ namespace name
             double precentB = (double)countB / (double)blood.Length * 100;
             double precentO = (double)countO / (double)blood.Length * 100;
             double precentAB = (double)countAB / (double)blood.Length * 100;
-
-
+            
             //女生總合的變數
             int sumG = 0;
+            
             //女生人數的變數
             int countG = 0;
+           
             //男生總合的變數
             int sumB = 0;
+            
             //男生人數的變數
             int countb = 0;
+           
             //總人數總合的變數
             int sum = 0;
+           
             //最大值和最小值的變數
             int max = -9999999;
             int min = 99999999;
@@ -77,12 +80,15 @@ namespace name
             //身高迴圈
             for (int t = 0; t < heights.Length; t++)
             {
+
                 //過濾無效資料
                 if (heights[t] > 100 && heights[t] < 200)
                 {
+
                     //如果是女生
                     if (grender[t] == "女")
                     {
+
                         //累加
                         sumG = sumG + heights[t];
                         countG++;
@@ -91,6 +97,7 @@ namespace name
                     //如果是男生
                     if (grender[t] == "男")
                     {
+
                         //累加
                         sumB = sumB + heights[t];
                         countb++;
@@ -143,9 +150,8 @@ namespace name
             Console.WriteLine("║ 全部平均身高:" + sum / (countG+countb)+ "cm                                                    ║");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("╠═══════════════════════════════════════════════════════════════════════╣");
-
-           
             Console.WriteLine("║天蠍座O型的人有:                                                       ║");
+            
             //星座迴圈
             for (int z = 0; z < zodiac.Length; z++)
             {   
