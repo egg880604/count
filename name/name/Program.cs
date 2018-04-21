@@ -140,7 +140,7 @@ namespace name
             // 列出各平均身高結果
             Console.WriteLine("║ 女生平均身高:" + sumG / countG+ "cm                                                    ║");
             Console.WriteLine("║ 男生平均身高:" + sumB / countb+ "cm                                                    ║");
-            Console.WriteLine("║ 全部平均身高:" + sum / heights.Length+ "cm                                                    ║");
+            Console.WriteLine("║ 全部平均身高:" + sum / (countG+countb)+ "cm                                                    ║");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("╠═══════════════════════════════════════════════════════════════════════╣");
 
